@@ -1,4 +1,3 @@
-<a href="https://zenodo.org/badge/latestdoi/266897409"><img src="https://zenodo.org/badge/266897409.svg" alt="DOI"></a>
 
 ## Code and data to reproduce analyses in 'Optimizing Non-Invasive Sampling of an Infectious Bat Virus'
 
@@ -27,4 +26,4 @@ For questions contact package maintainers John Giles (gilesjohnr@gmail.com).
 
 ### License
 
-Code here are available under the GNU General Public License v2.0.
+Code here are available under the GNU General Public License v3.0.
