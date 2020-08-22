@@ -7,8 +7,8 @@ Giles, John R., Alison J. Peel, Konstans Wells, Raina K. Plowright, Hamish McCal
 
 Data of Hendra virus prevalence used here are redistributed under the Creative Commons Attribution 4.0 license. Original data sources are made publicly available by the Queensland Department of Agriculture and Fisheries and New South Wales Department of Primary Industries here:
 
-  * [Individual-level prevalence data](www.data.qld.gov.au/dataset/hendra-virus-infection-in-australian-black-flying-foxes-pteropus-alecto)
-  * [Roost-level prevalence data](www.data.qld.gov.au/dataset/hev-infection-flying-foxes-eastern-australia)
+  * [Individual-level prevalence data](https://www.data.qld.gov.au/dataset/hendra-virus-infection-in-australian-black-flying-foxes-pteropus-alecto)
+  * [Roost-level prevalence data](https://www.data.qld.gov.au/dataset/hev-infection-flying-foxes-eastern-australia)
 
 
 ### Abstract
