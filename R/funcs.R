@@ -18,6 +18,7 @@ sheetsamp <- function(r=30, # radius of roost
      require(spatstat)
      require(rgeos)
      require(plotrix)
+        require(raster)
 
      canopy <- gBuffer(SpatialPoints(coords=data.frame(x=0,y=0)), width=r)
      hexpts <- spsample(canopy, type="hexagonal", cellsize=s)
@@ -104,7 +105,7 @@ sheetsamp <- function(r=30, # radius of roost
                                                              row.names=row.names(sheets)))
      }
 
-     crs(sheets) <- CRS("+proj=longlat +datum=WGS84")
+     crs(sheets) <- crs("+proj=longlat +datum=WGS84")
 
      if (plot == TRUE) {
 
@@ -115,10 +116,10 @@ sheetsamp <- function(r=30, # radius of roost
           for (i in seq(5,r,5)) {draw.circle(0,0, radius=i, lwd=0.8, border='grey70')}
           segments(x0=-r-(r*0.1), y0=0, x1=r+(r*0.1), y1=0, col='grey40')
           segments(x0=0, y0=-r-(r*0.1), x1=0, y1=r+(r*0.1), col='grey40')
-          text(x=seq(-r-0.4, r+0.4, 5),
-               y=-0.3,
+          text(x=seq(-r-0.6, r+0.4, 5),
+               y=-1.4,
                seq(-r, r, 5),
-               cex=0.7,
+               cex=0.65,
                col='grey40')
      }
 

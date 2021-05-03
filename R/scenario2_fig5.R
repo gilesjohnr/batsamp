@@ -85,38 +85,38 @@ pdf(path, width=6, height=6)
 par(mfrow=c(2,2), mar=c(4,4,2,2))
 plot(sq.prevs2$trueprev, sq.prevs2$estprev,
      xlim=c(0,1), ylim=c(0,1),
-     pch=16, col='royalblue4',
+     pch=1, col='royalblue4',
      ylab='estimated prevalence',
      xlab='',
      main='Quadrant')
-lines(c(0,1), c(0,1), lty=2, col='red')
-text(0.8, 0.1, paste('bias = ', round(sum(sq.prevs$estprev - sq.prevs$trueprev)/nrow(sq.prevs), 2)), sep="")
+lines(c(0,1), c(0,1), lty=2, lwd=2, col='red')
+text(0.8, 0.1, paste0('bias = ', round(sum(sq.prevs$estprev - sq.prevs$trueprev)/nrow(sq.prevs), 2)))
 
 plot(su.prevs2$trueprev, su.prevs2$estprev,
      xlim=c(0,1), ylim=c(0,1),
-     pch=16, col='royalblue4',
+     pch=1, col='royalblue4',
      ylab='',
      xlab='',
      main='Uniform')
-lines(c(0,1), c(0,1), lty=2, col='red')
+lines(c(0,1), c(0,1), lty=2, lwd=2, col='red')
 text(0.8, 0.1, paste('bias = ', round(sum(su.prevs$estprev - su.prevs$trueprev)/nrow(su.prevs), 2)), sep="")
 
 plot(ss.prevs2$trueprev, ss.prevs2$estprev,
      xlim=c(0,1), ylim=c(0,1),
-     pch=16, col='royalblue4',
+     pch=1, col='royalblue4',
      ylab='estimated prevalence',
      xlab='true prevalence',
      main='Stratified')
-lines(c(0,1), c(0,1), lty=2, col='red')
+lines(c(0,1), c(0,1), lty=2, lwd=2, col='red')
 text(0.8, 0.1, paste('bias = ', round(sum(ss.prevs$estprev - ss.prevs$trueprev)/nrow(ss.prevs), 2)), sep="")
 
 plot(sr.prevs2$trueprev, sr.prevs2$estprev,
      xlim=c(0,1), ylim=c(0,1),
-     pch=16, col='royalblue4',
+     pch=1, col='royalblue4',
      ylab='',
      xlab='true prevalence',
      main='Random')
-lines(c(0,1), c(0,1), lty=2, col='red')
+lines(c(0,1), c(0,1), lty=2, lwd=2, col='red')
 text(0.8, 0.1, paste('bias = ', round(sum(sr.prevs$estprev - sr.prevs$trueprev)/nrow(sr.prevs), 2)), sep="")
 
 dev.off()

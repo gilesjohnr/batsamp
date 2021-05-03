@@ -1,3 +1,7 @@
+library(ggplot2)
+library(dplyr)
+library(lemon)
+
 #------------------------------------------------------------
 # Data
 #------------------------------------------------------------
@@ -104,8 +108,8 @@ p0 <- ggplot(df) +
            axis.text=element_text(size=11))
 
 path <- 'figs/fig2_prevalence.pdf'
-pdf(path, width=8, height=5)
+pdf(path, width=8, height=5, onefile=FALSE)
 
-p0
+reposition_legend(p0 + theme_classic(), 'top right', x=1-0.1, y=1-0.1)
 
 dev.off()

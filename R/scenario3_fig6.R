@@ -62,6 +62,7 @@ system.time(
                                                file=paste('output/scenario3/sim_', i, '.csv', sep=""))
                              }
 )
+
 # Collate simulation output
 scen3 <- bind_rows(lapply(list.files("output/scenario3",
                                     full.names=T),
@@ -121,35 +122,45 @@ text('(a)', x=47.5, y=17, cex=1.2)
 plot(scen3$tot.indiv, BRTscen3$fitted,
      pch=16, col=tmp,
      ylab='Fitted estimation bias',
-     xlab='Sum Cb')
+     xlab='Sum Cb',
+     yaxt='n')
+axis(side=2, las=2)
 abline(h=0, lty=2, cex=2)
 text('(b)', x=max(scen3$tot.indiv)*0.95, y=max(BRTscen3$fitted)*0.975, cex=1.2)
 
 plot(scen3$trueprev, BRTscen3$fitted,
      pch=16, col=tmp,
      ylab='',
-     xlab='true prevalence')
+     xlab='true prevalence',
+     yaxt='n')
+axis(side=2, las=2)
 abline(h=0, lty=2, cex=2)
 text('(c)', x=max(scen3$trueprev)*0.95, y=max(BRTscen3$fitted)*0.975, cex=1.2)
 
 plot(scen3$mI, BRTscen3$fitted,
      pch=16, col=tmp,
      ylab='Fitted estimation bias',
-     xlab='Morans I')
+     xlab='Morans I',
+     yaxt='n')
+axis(side=2, las=2)
 abline(h=0, lty=2, cex=2)
 text('(d)', x=max(scen3$mI)*0.95, y=max(BRTscen3$fitted)*0.975, cex=1.2)
 
 plot(factor(scen3$type), BRTscen3$fitted,
      pch=16, col=c('royalblue4', 'darkorange'),
      ylab='',
-     xlab='Type of sampling design')
+     xlab='Type of sampling design',
+     yaxt='n')
+axis(side=2, las=2)
 abline(h=0, lty=2, cex=2)
 text('(e)', x=2.4, y=max(BRTscen3$fitted)*0.975, cex=1.2)
 
 plot(scen3$Nb, BRTscen3$fitted,
      pch=16, col=tmp,
      ylab='',
-     xlab='Number of bat in roost (Nb)')
+     xlab='Number of bat in roost (Nb)',
+     yaxt='n')
+axis(side=2, las=2)
 abline(h=0, lty=2, cex=2)
 text('(f)', x=max(scen3$Nb)*0.975, y=max(BRTscen3$fitted)*0.975, cex=1.2)
 

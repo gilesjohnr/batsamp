@@ -1,4 +1,12 @@
 # Plot sheet sample designs
+library(sp)
+library(spatstat)
+library(rgeos)
+library(plotrix)
+library(stringr)
+library(sf)
+
+set.seed(1234)
 
 path <- 'figs/fig4_sheetsamp.pdf'
 pdf(path, width=6, height=6)
