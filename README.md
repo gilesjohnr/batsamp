@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/289552613.svg)](https://zenodo.org/badge/latestdoi/289552613)
 
 ## Code and data to reproduce analyses in 'Optimizing Non-Invasive Sampling of an Infectious Bat Virus'
 
